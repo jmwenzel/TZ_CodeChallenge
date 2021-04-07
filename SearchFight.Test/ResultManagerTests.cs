@@ -50,8 +50,12 @@ namespace SearchFight.Test
                 _bingEngine.Object,
                 _googleEngine.Object
             };
+
+            var resultManager = new ResultManager();
+            resultManager.SearchEngines = searchEngines;
+
             // Act
-            new ResultManager().EngineWinners(totalResults, messages, searchEngines);
+            resultManager.EngineWinners(totalResults, messages);
             // Assert
             Assert.Equal(2, messages.Count);
             Assert.True(messages.IndexOf("Bing winner: java") > -1);
@@ -92,8 +96,11 @@ namespace SearchFight.Test
                 _googleEngine.Object
             };
 
+            var resultManager = new ResultManager();
+            resultManager.SearchEngines = searchEngines;
+
             // Act
-            await new ResultManager().SearchResults(queries, totalResults, messages, searchEngines);
+            await resultManager.SearchResults(queries, totalResults, messages);
             // Assert
             Assert.Equal(2, totalResults.Count);
             Assert.True(messages.IndexOf("java: Bing 5000 Google 8000") > -1);

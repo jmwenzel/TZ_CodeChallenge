@@ -14,6 +14,7 @@ namespace SearchFight.BL.Implementations
         {
             _searchEngines = searchEngines;
             _resultManager = resultManager;
+            _resultManager.SearchEngines = _searchEngines;
         }
 
         public async Task<List<string>> RunSearch(List<string> query)
@@ -22,9 +23,9 @@ namespace SearchFight.BL.Implementations
             var totalResults = new List<SearchResult>();
 
             // Get search results per query term
-            await _resultManager.SearchResults(query, totalResults, messageList, _searchEngines);
+            await _resultManager.SearchResults(query, totalResults, messageList);
             // Get winners per search engine
-            _resultManager.EngineWinners(totalResults, messageList, _searchEngines);
+            _resultManager.EngineWinners(totalResults, messageList);
             // Get Total Winner
             _resultManager.TotalWinners(totalResults, messageList);
 

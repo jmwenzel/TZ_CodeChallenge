@@ -6,9 +6,10 @@ namespace SearchFight.BL.Interfaces
 {
     public interface IResultManager
     {
-        Task SearchResults(List<string> queryArray, List<SearchResult> totalResults, List<string> messages, List<ISearchEngine> searchEngines);
+        List<ISearchEngine> SearchEngines { get; set; }
+        Task SearchResults(List<string> queryArray, List<SearchResult> totalResults, List<string> messages);
         void TotalWinners(List<SearchResult> totalResults, List<string> messages);
-        void EngineWinners(List<SearchResult> totalResults, List<string> messages, List<ISearchEngine> searchEngines);
+        void EngineWinners(List<SearchResult> totalResults, List<string> messages);
     }
 
 }
