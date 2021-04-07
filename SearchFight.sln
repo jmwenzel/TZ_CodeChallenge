@@ -3,9 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30717.126
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SearchFight", "SearchFight\SearchFight.csproj", "{7ED1B5AA-3C0E-4E66-B718-0F3D1027CDE5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SearchFight", "SearchFight\SearchFight.csproj", "{7ED1B5AA-3C0E-4E66-B718-0F3D1027CDE5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SearchFight.BL", "SearchFight.BL\SearchFight.BL.csproj", "{926E45A6-976B-4DFE-8442-0F243FA593DE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SearchFight.BL", "SearchFight.BL\SearchFight.BL.csproj", "{926E45A6-976B-4DFE-8442-0F243FA593DE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{1B1000F1-A997-4384-871B-79EB0D09845F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{54BC2B0A-A91C-4100-9C25-6C54667E1918}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SearchFight.Test", "SearchFight.Test\SearchFight.Test.csproj", "{E3160131-CC84-4C47-8FC0-FB9C89615CB4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,9 +27,18 @@ Global
 		{926E45A6-976B-4DFE-8442-0F243FA593DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{926E45A6-976B-4DFE-8442-0F243FA593DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{926E45A6-976B-4DFE-8442-0F243FA593DE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E3160131-CC84-4C47-8FC0-FB9C89615CB4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E3160131-CC84-4C47-8FC0-FB9C89615CB4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E3160131-CC84-4C47-8FC0-FB9C89615CB4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E3160131-CC84-4C47-8FC0-FB9C89615CB4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{7ED1B5AA-3C0E-4E66-B718-0F3D1027CDE5} = {1B1000F1-A997-4384-871B-79EB0D09845F}
+		{926E45A6-976B-4DFE-8442-0F243FA593DE} = {1B1000F1-A997-4384-871B-79EB0D09845F}
+		{E3160131-CC84-4C47-8FC0-FB9C89615CB4} = {54BC2B0A-A91C-4100-9C25-6C54667E1918}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {80566F1C-85D8-45F9-8E08-E8A1F78BDBF8}
