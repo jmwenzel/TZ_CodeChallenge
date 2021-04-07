@@ -14,19 +14,17 @@ namespace SearchFight
     {
         static async Task Main(string[] args)
         {
-            /*if (args.Length == 0)
+            if (args.Length == 0)
             {
                 Console.WriteLine("Please enter at least one search term");
                 return;
-            }*/
-
-            var arg = new List<string> { "net" }; 
+            }
 
             var searchEngines = GetSearchEngineImplementations();
 
             var searchProxy = new SearchProxy(searchEngines, new ResultManager());
             
-            var messages = await searchProxy.RunSearch(arg);
+            var messages = await searchProxy.RunSearch(args.ToList());
             messages.ForEach(m => Console.WriteLine(m));
 
             Console.ReadKey();
