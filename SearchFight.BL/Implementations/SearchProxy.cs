@@ -19,7 +19,6 @@ namespace SearchFight.BL.Implementations
         public async Task<List<string>> RunSearch(List<string> query)
         {
             var messageList = new List<string>();
-
             var totalResults = new List<SearchResult>();
 
             // Get search results per query term
